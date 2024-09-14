@@ -5,7 +5,7 @@ using System.Collections;
 using SimpleJSON;
 using UnityEngine.SceneManagement;
 
-public class PhoneCamera : MonoBehaviour
+public class PhoneCameraPerson : MonoBehaviour
 {
     private WebCamTexture camTexture;
     public RawImage display;  // Assign this to a UI RawImage to see the camera feed
@@ -76,7 +76,6 @@ public class PhoneCamera : MonoBehaviour
         {
             Debug.Log("No objects detected.");
             Popup.SetActive(false);
-            detectionButton.gameObject.SetActive(false);
             return;
         }
 
@@ -85,10 +84,9 @@ public class PhoneCamera : MonoBehaviour
             string detectedClass = detection.Value["class"];
             float confidence = detection.Value["confidence"].AsFloat;
 
-            if ((detectedClass == "cell phone" || detectedClass == "laptop") && confidence > 0.2) // Threshold confidence
+            if ((detectedClass == "person") && confidence > 0.2) // Threshold confidence
             {
                 Popup.SetActive(true);  // Show the popup
-                detectionButton.gameObject.SetActive(true);
                 break;
             }
         }

@@ -203,6 +203,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 537946412}
+    - target: {fileID: 616220247199719174, guid: 7f90e162c42753142a6b62db0d158d5b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToOpeningCutscene
+      objectReference: {fileID: 0}
     - target: {fileID: 1792751040456637270, guid: 7f90e162c42753142a6b62db0d158d5b, type: 3}
       propertyPath: m_Name
       value: Button

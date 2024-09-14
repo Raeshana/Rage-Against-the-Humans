@@ -10,7 +10,9 @@ public class PhoneCamera : MonoBehaviour
     private WebCamTexture camTexture;
     public RawImage display;  // Assign this to a UI RawImage to see the camera feed
     public float requestInterval = 1f;  // Delay between each request (in seconds)
-    public Button detectionButton;  // Button to show when an object is detected
+    public GameObject Popup;  // Reference to the entire Popup GameObject
+    public Button detectionButton;           // Reference to the Button inside the Popup
+
 
     void Start()
     {
@@ -18,12 +20,14 @@ public class PhoneCamera : MonoBehaviour
         display.texture = camTexture;
         camTexture.Play();  // Start the camera feed
 
-        // Ensure the button is not visible at start
-        detectionButton.gameObject.SetActive(false);
+        Popup.SetActive(false);  // Hide the popup initially
+
+        // detectionButton.onClick.AddListener(TriggerMiniGame);  // Ensure button click triggers the mini-game
 
         // Start sending frames with a delay between requests
         StartCoroutine(SendImageRoutine());
     }
+
 
     IEnumerator SendImageRoutine()
     {
@@ -67,39 +71,31 @@ public class PhoneCamera : MonoBehaviour
 
     void ProcessDetectionData(string jsonResponse)
     {
-        Debug.Log("Processing detection data...");
-
         var detectionData = JSON.Parse(jsonResponse);
         if (detectionData.Count == 0)
         {
             Debug.Log("No objects detected.");
-            detectionButton.gameObject.SetActive(false);  // Ensure button is hidden if no objects are detected
+            Popup.SetActive(false);
             return;
         }
 
-        bool objectDetected = false;
         foreach (var detection in detectionData)
         {
             string detectedClass = detection.Value["class"];
             float confidence = detection.Value["confidence"].AsFloat;
 
-            Debug.Log($"Detected: {detectedClass} with confidence {confidence}");
-
             if ((detectedClass == "cell phone" || detectedClass == "laptop") && confidence > 0.2) // Threshold confidence
             {
-                objectDetected = true;
-                break; // Assuming you only need one detection
+                Popup.SetActive(true);  // Show the popup
+                break;
             }
         }
-
-        // Show or hide the button based on detection status
-        detectionButton.gameObject.SetActive(objectDetected);
     }
 
     // Function to trigger the mini-game when a cell phone is detected
-    void TriggerMiniGame()
-    {
-        Debug.Log("Cell phone detected! Triggering mini-game...");
-        SceneManager.LoadScene("HackingMinigame");  // Load the mini-game scene
-    }
+    // void TriggerMiniGame()
+    // {
+    //     Debug.Log("Triggering mini-game...");
+    //     SceneManager.LoadScene("HackingMinigame");  // Make sure this is the correct scene name
+    // }
 }

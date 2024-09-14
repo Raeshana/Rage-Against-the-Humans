@@ -53,6 +53,12 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("OpeningCutscene", LoadSceneMode.Single);
     }
 
+    [ContextMenu("Go to closing cutscene")]
+    public void GoToClosingCutscene()
+    {
+        SceneManager.LoadScene("ClosingCutscene", LoadSceneMode.Single);
+    }
+
     public IEnumerator GoToNextScene(string scene)
     {
         yield return new WaitForSeconds(0.1f);

@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeFields] AudioSource musicSource;
-    [SerializeFields] AudioSource SFXSource;
+    [Header("--------Audio Source---------")]
+    [SerializeField] AudioSource musicSource;
+    [SerializeField] AudioSource SFXSource;
 
-    public AudioClip background;
+    [Header("--------Audio Clip---------")]
+    public AudioClip GameLoop;
+    public AudioClip Hacking;
+    public AudioClip Loading;
+    public AudioClip MachineShutdown;
+    public AudioClip TargetFound;
 }

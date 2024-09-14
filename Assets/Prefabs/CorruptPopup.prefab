@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 4864109799919840046}
   - component: {fileID: 456346264289502072}
   m_Layer: 5
-  m_Name: Popup
+  m_Name: CorruptPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

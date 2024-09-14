@@ -606,7 +606,7 @@ PrefabInstance:
       objectReference: {fileID: 701788069}
     - target: {fileID: 8545115303257181904, guid: 0f1060d6f7ddcd246bd7c39cf81d570d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToCameraScreen
+      value: GoToWarScreen
       objectReference: {fileID: 0}
     - target: {fileID: 8545115303257181904, guid: 0f1060d6f7ddcd246bd7c39cf81d570d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

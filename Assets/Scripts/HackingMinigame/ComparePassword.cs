@@ -16,6 +16,8 @@ public class ComparePassword : MonoBehaviour
 
     private SceneController sceneController;
 
+    private TypingEffect typingEffect;
+
     void Awake() {
         // Get terminal information
         terminal = GameObject.FindWithTag("Terminal").GetComponent<TMP_Text>(); 
@@ -25,6 +27,9 @@ public class ComparePassword : MonoBehaviour
 
         // Get scene controller information
         sceneController = GameObject.FindWithTag("SceneController").GetComponent<SceneController>(); 
+
+        // Get typing effect info
+        typingEffect = GameObject.FindWithTag("StringManager").GetComponent<TypingEffect>(); 
     }
 
     public void DoComparison() {
@@ -60,25 +65,23 @@ public class ComparePassword : MonoBehaviour
 
     void CorrectSequence() {
         string lines = "\n> " + guess + "\n> Exact match!";
-        stringManager.typingEffect.StartDialogue(terminal, lines);
-        //terminal.text += "\n> " + guess + "\n> Exact match!";
+        typingEffect.StartDialogue(terminal, lines);
         StartCoroutine(WinScreen());
     }
 
     IEnumerator WinScreen() {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(2f);
         sceneController.GoToWinScreen();
     }
 
     void IncorrectSequence() {
         string lines = "\n> " + guess + "\n> Incorrect! " + similar + " chars correct.";
-        stringManager.typingEffect.StartDialogue(terminal, lines);
-        //terminal.text += "\n> " + guess + "\n> Incorrect! " + similar + " chars correct.";
+        typingEffect.StartDialogue(terminal, lines);
         StartCoroutine(LoseScreen());
     }
 
     IEnumerator LoseScreen() {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(4f);
         attemptManager.LoseAttempt();
     }
 }

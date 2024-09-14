@@ -31,8 +31,13 @@ public class AttemptManager : MonoBehaviour
 
     void Update() {
         if (remAttempts <= 0) {
-            sceneController.GoToLoseScreen();
+            StartCoroutine(LoseScreen());
         }
+    }
+
+    IEnumerator LoseScreen() {
+        yield return new WaitForSeconds(2f);
+        sceneController.GoToLoseScreen();
     }
 
     public void LoseAttempt() {

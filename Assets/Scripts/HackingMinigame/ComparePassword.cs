@@ -79,9 +79,4 @@ public class ComparePassword : MonoBehaviour
         typingEffect.StartDialogue(terminal, lines);
         attemptManager.LoseAttempt();
     }
-
-    IEnumerator LoseScreen() {
-        yield return new WaitForSeconds(5f);
-        StartCoroutine(LoseScreen());
-    }
 }

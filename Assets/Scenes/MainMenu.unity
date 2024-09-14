@@ -874,11 +874,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 177338841}
   SFXSource: {fileID: 738540463}
-  GameLoop: {fileID: 0}
-  Hacking: {fileID: 0}
-  Loading: {fileID: 0}
-  MachineShutdown: {fileID: 0}
-  TargetFound: {fileID: 0}
+  GameLoop: {fileID: 8300000, guid: b9e81b574ba104439a112dfad8c8f19c, type: 3}
+  Hacking: {fileID: 8300000, guid: 28982a5484e3e4d2cb1b11de4571f5bb, type: 3}
+  Loading: {fileID: 8300000, guid: 9f7f1b75f9a994d4ab1edceeb3b379fa, type: 3}
+  MachineShutdown: {fileID: 8300000, guid: cd592ac5af9994c088a5c2d2ca466cf2, type: 3}
+  TargetFound: {fileID: 8300000, guid: 1c68f2c4ebfae4e0bbe1796390075de8, type: 3}
 --- !u!4 &1746292444
 Transform:
   m_ObjectHideFlags: 0

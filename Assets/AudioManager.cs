@@ -14,4 +14,11 @@ public class AudioManager : MonoBehaviour
     public AudioClip Loading;
     public AudioClip MachineShutdown;
     public AudioClip TargetFound;
+
+    private void Start()
+    {
+        musicSource.clip = GameLoop;
+        musicSource.Play();
+    }
+
 }

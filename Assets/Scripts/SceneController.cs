@@ -51,7 +51,7 @@ public class SceneController : MonoBehaviour
 
     private void Awake()
 {
-    audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    audioManager = GameObject.FindWithTag("Audio").GetComponent<AudioManager>();
 }
     [ContextMenu("Go to opening cutscene")]
     public void GoToOpeningCutscene()

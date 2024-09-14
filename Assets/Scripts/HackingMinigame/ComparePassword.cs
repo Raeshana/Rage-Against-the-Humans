@@ -77,11 +77,11 @@ public class ComparePassword : MonoBehaviour
     void IncorrectSequence() {
         string lines = "\n> " + guess + "\n> Incorrect! " + similar + " chars correct.";
         typingEffect.StartDialogue(terminal, lines);
-        StartCoroutine(LoseScreen());
+        attemptManager.LoseAttempt();
     }
 
     IEnumerator LoseScreen() {
-        yield return new WaitForSeconds(4f);
-        attemptManager.LoseAttempt();
+        yield return new WaitForSeconds(5f);
+        StartCoroutine(LoseScreen());
     }
 }

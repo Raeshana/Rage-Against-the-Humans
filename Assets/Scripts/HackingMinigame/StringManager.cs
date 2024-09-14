@@ -59,7 +59,7 @@ public class StringManager : MonoBehaviour
 
     void GeneratePassword() {
         password = words[GetRandNum()];
-        Debug.Log(password);
+        // Debug.Log(password);
 
         foreach (string word in words) {
             if (word != password) {
@@ -69,7 +69,7 @@ public class StringManager : MonoBehaviour
                 }
                 for (int i = 0; i < shorter.Length; i++) {
                     if (password[i] == word[i]) {
-                        Debug.Log(word);
+                        // Debug.Log(word);
                         return;
                     };
                 }

@@ -3,24 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - 1-char
-  - 2-char
-  - 3-char
-  - 4-char
-  - 5-char
-  - 6-char
-  - 7-char
-  - 8-char
-  - StringManager
-  - Terminal
-  - AttemptManager
-  - SceneController
-<<<<<<< Updated upstream
-  - LastScene
-=======
-  - Audio
->>>>>>> Stashed changes
+  tags: []
   layers:
   - Default
   - TransparentFX

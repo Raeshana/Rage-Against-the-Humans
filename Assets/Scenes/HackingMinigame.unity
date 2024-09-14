@@ -642,6 +642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 186526899}
   - component: {fileID: 186526900}
+  - component: {fileID: 186526901}
   m_Layer: 5
   m_Name: StringManager
   m_TagString: StringManager
@@ -691,7 +692,20 @@ MonoBehaviour:
   - {fileID: 596945336}
   - {fileID: 1071586073}
   - {fileID: 1625905284}
-  password: 
+  typingEffect: {fileID: 186526901}
+--- !u!114 &186526901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186526898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d4c815ac79d52418aac8f6afa1423d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpeed: 0.07
 --- !u!224 &194172155 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8804610720306475952, guid: f0f9f1e9f822c0a44971f32e96a33b56, type: 3}

@@ -31,7 +31,6 @@ public class AttemptManager : MonoBehaviour
 
     void Update() {
         if (remAttempts <= 0) {
-            Debug.Log("loser");
             sceneController.GoToLoseScreen();
         }
     }

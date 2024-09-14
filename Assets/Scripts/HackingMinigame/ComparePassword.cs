@@ -59,12 +59,26 @@ public class ComparePassword : MonoBehaviour
     }
 
     void CorrectSequence() {
-        terminal.text += "\n> " + guess + "\n> Exact match!";
+        string lines = "\n> " + guess + "\n> Exact match!";
+        stringManager.typingEffect.StartDialogue(terminal, lines);
+        //terminal.text += "\n> " + guess + "\n> Exact match!";
+        StartCoroutine(WinScreen());
+    }
+
+    IEnumerator WinScreen() {
+        yield return new WaitForSeconds(0.3f);
         sceneController.GoToWinScreen();
     }
 
     void IncorrectSequence() {
-        terminal.text += "\n> " + guess + "\n> Incorrect! " + similar + " chars correct.";
+        string lines = "\n> " + guess + "\n> Incorrect! " + similar + " chars correct.";
+        stringManager.typingEffect.StartDialogue(terminal, lines);
+        //terminal.text += "\n> " + guess + "\n> Incorrect! " + similar + " chars correct.";
+        StartCoroutine(LoseScreen());
+    }
+
+    IEnumerator LoseScreen() {
+        yield return new WaitForSeconds(0.3f);
         attemptManager.LoseAttempt();
     }
 }

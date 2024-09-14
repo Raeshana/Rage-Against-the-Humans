@@ -26,7 +26,7 @@ public class SceneController : MonoBehaviour
     [ContextMenu("Go to camera screen")]
     public void GoToCameraScreen()
     {
-        SceneManager.LoadScene("Camera Screen", LoadSceneMode.Single);
+        SceneManager.LoadScene("CameraScreen", LoadSceneMode.Single);
     }
 
     [ContextMenu("Go to lose screen")]

@@ -65,7 +65,7 @@ public class PhoneCamera : MonoBehaviour
     {
         Debug.Log("Processing detection data...");  // Add this to confirm the function is called
 
-        var detectionData = JSON.Parse(jsonResponse);  // Parse the JSON response
+        var detectionData = JSON.Parse(jsonResponse);
 
         if (detectionData.Count == 0)
         {
@@ -73,23 +73,20 @@ public class PhoneCamera : MonoBehaviour
             return;
         }
 
-        // Loop through each detection
         foreach (var detection in detectionData)
         {
             string detectedClass = detection.Value["class"];
-            Debug.Log($"Detected: {detectedClass}");  // Log every detected class for debugging
+            Debug.Log($"Detected: {detectedClass}");
 
-            // If a "cell phone" is detected, trigger the mini-game
-            if (detectedClass == "cell phone" || detectedClass == "laptop")
+            if (detectedClass == "cell phone")
             {
-                // Show the detected object popup
-                FindObjectOfType<UIManager>().ShowObjectDetected(detectedClass);
-                
-                // After a delay, show the hack prompt
-                Invoke("ShowHackDevicePrompt", 2f);  // Adjust delay as needed
+                Debug.Log("Cell phone detected! Triggering MiniGameScene...");
+                TriggerMiniGame();
+                break;
             }
         }
     }
+
 
 
 
@@ -97,6 +94,6 @@ public class PhoneCamera : MonoBehaviour
     void TriggerMiniGame()
     {
         Debug.Log("Cell phone detected! Triggering mini-game...");
-        SceneManager.LoadScene("MiniGameScene");  // Load the mini-game scene
+        SceneManager.LoadScene("HackingMinigame");  // Load the mini-game scene
     }
 }

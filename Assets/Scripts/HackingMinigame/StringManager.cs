@@ -13,8 +13,6 @@ public class StringManager : MonoBehaviour
 
     [HideInInspector]
     private string password;
-
-    public TypingEffect typingEffect;
  
     // Start is called before the first frame update
     void Start()

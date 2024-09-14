@@ -14,6 +14,8 @@ TagManager:
   - 8-char
   - StringManager
   - Terminal
+  - AttemptManager
+  - SceneController
   layers:
   - Default
   - TransparentFX

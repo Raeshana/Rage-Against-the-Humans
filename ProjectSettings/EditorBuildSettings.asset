@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HackingMinigame.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Scenes/AccessDenied.unity
+    guid: 7afbf2487ce31e74cb3add8b692ada82
+  - enabled: 1
+    path: Assets/Scenes/AccessGranted.unity
+    guid: 253e7767c6283bb47bd4424bde29e371
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 46496b25ac0724e7692ead06bc22efe1, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 3fe70b05adc974b21b3a4b957b1de0b4, type: 2}

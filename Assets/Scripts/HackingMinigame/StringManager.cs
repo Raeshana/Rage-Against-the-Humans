@@ -11,7 +11,8 @@ public class StringManager : MonoBehaviour
     [SerializeField] TMP_Text[] wordsArr;
     private List<string> words = new List<string>();
 
-    public string password = "";
+    [HideInInspector]
+    private string password;
 
     // Start is called before the first frame update
     void Start()
@@ -80,5 +81,9 @@ public class StringManager : MonoBehaviour
 
     int GetRandNum() {
         return Random.Range(0, wordsArr.Length-1);
+    }
+
+    public string GetPassword() {
+        return password;
     }
 }

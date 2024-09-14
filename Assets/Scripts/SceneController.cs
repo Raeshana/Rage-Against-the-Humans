@@ -47,9 +47,16 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("WarScreen", LoadSceneMode.Single);
     }
 
+    AudioManager audioManager;
+
+    private void Awake()
+{
+    audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+}
     [ContextMenu("Go to opening cutscene")]
     public void GoToOpeningCutscene()
     {
+        audioManager.PlaySFX(audioManager.Warning);
         SceneManager.LoadScene("OpeningCutscene", LoadSceneMode.Single);
     }
 

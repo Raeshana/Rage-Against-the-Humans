@@ -16,7 +16,11 @@ TagManager:
   - Terminal
   - AttemptManager
   - SceneController
+<<<<<<< Updated upstream
   - LastScene
+=======
+  - Audio
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

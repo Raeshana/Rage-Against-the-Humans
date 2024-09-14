@@ -5,23 +5,7 @@ using TMPro;
 
 public class TypingEffect : MonoBehaviour
 {
-    // public TextMeshProUGUI textComponent;
-    // public string[] lines;
     public float textSpeed;
-
-    // private int index;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void StartDialogue(TMP_Text textComponent, string lines) {
         StartCoroutine(TypeLine(textComponent, lines));

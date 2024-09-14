@@ -44,7 +44,7 @@ public class PhoneCamera : MonoBehaviour
     IEnumerator SendImageToFlask(byte[] imageBytes)
     {
         // Make a POST request to send the image
-        UnityWebRequest request = UnityWebRequest.PostWwwForm("https://34f1-34-138-126-178.ngrok-free.app/detect", UnityWebRequest.kHttpVerbPOST);
+        UnityWebRequest request = UnityWebRequest.PostWwwForm("https://ccaa-34-173-106-55.ngrok-free.app/detect", UnityWebRequest.kHttpVerbPOST);
         request.uploadHandler = new UploadHandlerRaw(imageBytes);
         request.SetRequestHeader("Content-Type", "application/octet-stream");
 

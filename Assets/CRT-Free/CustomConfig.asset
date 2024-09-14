@@ -32,7 +32,7 @@ MonoBehaviour:
       height: 0.1
     zoom: 1
     monitorRoundness: 0.2
-    monitorTexture: {fileID: 0}
+    monitorTexture: {fileID: 2800000, guid: a5e897f9f29eb488ba4791cd52d004b5, type: 3}
     monitorColor: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 1}
     innerMonitorDarkness: 0.594
     innerMonitorShine: 0.231
@@ -42,4 +42,4 @@ MonoBehaviour:
       sizeMultiplier: 2
     innerMonitorShineRadius: -0.087
     innerMonitorShineCurve: 10
-  validationId: d64cc0eb-7fad-4afe-bfed-f8f09d930e77
+  validationId: 47def8f3-1036-49d0-8340-f77655fa4954

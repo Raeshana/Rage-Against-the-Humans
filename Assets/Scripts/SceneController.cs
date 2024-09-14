@@ -41,16 +41,10 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("AccessGranted", LoadSceneMode.Single);
     }
 
-    [ContextMenu("Go to how to play")]
-    public void GoToHowToPlay()
+    [ContextMenu("Go to war screen")]
+    public void GoToWarScreen()
     {
-        // insert code here
-    }
-
-    [ContextMenu("Go to Credits Screen")]
-    public void GoToCreditsScreen()
-    {
-        // insert code here
+        SceneManager.LoadScene("WarScreen", LoadSceneMode.Single);
     }
 
     public IEnumerator GoToNextScene(string scene)

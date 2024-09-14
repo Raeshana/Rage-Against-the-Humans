@@ -47,6 +47,12 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("WarScreen", LoadSceneMode.Single);
     }
 
+    [ContextMenu("Go to opening cutscene")]
+    public void GoToOpeningCutscene()
+    {
+        SceneManager.LoadScene("OpeningCutscene", LoadSceneMode.Single);
+    }
+
     public IEnumerator GoToNextScene(string scene)
     {
         yield return new WaitForSeconds(0.1f);

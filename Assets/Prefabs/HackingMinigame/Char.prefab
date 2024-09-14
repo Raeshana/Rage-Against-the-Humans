@@ -102,7 +102,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 20
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -147,9 +147,10 @@ GameObject:
   - component: {fileID: 3586670497043171643}
   - component: {fileID: 7339744838620365156}
   - component: {fileID: 5574933719295733384}
+  - component: {fileID: 6147919611888876130}
   m_Layer: 5
   m_Name: Char
-  m_TagString: Untagged
+  m_TagString: 1-char
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,7 +256,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3586670497043171643}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6147919611888876130}
+        m_TargetAssemblyTypeName: ComparePassword, Assembly-CSharp
+        m_MethodName: DoComparison
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5574933719295733384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,4 +281,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15e6a91288914dd448d4c4d49610c0a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stringSet: {fileID: 11400000, guid: 04b89c393dbc388428bc1e887e8daa76, type: 2}
+  stringSetArr:
+  - {fileID: 11400000, guid: 04b89c393dbc388428bc1e887e8daa76, type: 2}
+  - {fileID: 11400000, guid: 1c920b54ef1e94a4f87e4dc2669a20c6, type: 2}
+  - {fileID: 11400000, guid: c8894e981e5809e4dbc68ca96ce47569, type: 2}
+  - {fileID: 11400000, guid: e0912e0d9d70e94418375b0ffd10ac4f, type: 2}
+  - {fileID: 11400000, guid: c00aea91b9822de40b49dd97b9fe2273, type: 2}
+  - {fileID: 11400000, guid: 87a21660194346241ac1c273cb2fc79e, type: 2}
+  - {fileID: 11400000, guid: 9e25a3112a06d2e49a6067751237196d, type: 2}
+  - {fileID: 11400000, guid: df08ee8416391d34897de13a67b2fe4b, type: 2}
+--- !u!114 &6147919611888876130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909726330573868202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 276459f4c1bae71459428b33c54656f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

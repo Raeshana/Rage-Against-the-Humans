@@ -78,9 +78,9 @@ public class PhoneCamera : MonoBehaviour
             string detectedClass = detection.Value["class"];
             Debug.Log($"Detected: {detectedClass}");
 
-            if (detectedClass == "cell phone")
+            if (detectedClass == "cell phone" || detectedClass == "laptop")
             {
-                Debug.Log("Cell phone detected! Triggering MiniGameScene...");
+                Debug.Log("Device detected! Triggering MiniGameScene...");
                 TriggerMiniGame();
                 break;
             }

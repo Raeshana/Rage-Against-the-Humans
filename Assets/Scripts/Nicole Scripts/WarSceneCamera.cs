@@ -21,6 +21,7 @@ public class WarSceneCamera : MonoBehaviour
         camTexture.Play();  // Start the camera feed
 
         Popup.SetActive(false);  // Hide the popup initially
+        detectionButton.gameObject.SetActive(false);
 
         // detectionButton.onClick.AddListener(TriggerMiniGame);  // Ensure button click triggers the mini-game
 
@@ -52,7 +53,7 @@ public class WarSceneCamera : MonoBehaviour
     IEnumerator SendImageToFlask(byte[] imageBytes)
     {
         // Make a POST request to send the image
-        UnityWebRequest request = UnityWebRequest.PostWwwForm("https://ccaa-34-173-106-55.ngrok-free.app/detect", UnityWebRequest.kHttpVerbPOST);
+        UnityWebRequest request = UnityWebRequest.PostWwwForm("https://a260-34-106-94-12.ngrok-free.app/detect", UnityWebRequest.kHttpVerbPOST);
         request.uploadHandler = new UploadHandlerRaw(imageBytes);
         request.SetRequestHeader("Content-Type", "application/octet-stream");
 
@@ -76,6 +77,7 @@ public class WarSceneCamera : MonoBehaviour
         {
             Debug.Log("No objects detected.");
             Popup.SetActive(false);
+            detectionButton.gameObject.SetActive(false);
             return;
         }
 
@@ -87,6 +89,7 @@ public class WarSceneCamera : MonoBehaviour
             if ((detectedClass == "person") && confidence > 0.2) // Threshold confidence
             {
                 Popup.SetActive(true);  // Show the popup
+                detectionButton.gameObject.SetActive(true);
                 break;
             }
         }

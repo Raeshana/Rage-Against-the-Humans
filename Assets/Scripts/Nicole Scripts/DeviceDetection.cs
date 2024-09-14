@@ -5,7 +5,7 @@ using System.Collections;
 using SimpleJSON;
 using UnityEngine.SceneManagement;
 
-public class PhoneCamera : MonoBehaviour
+public class DeviceDetection : MonoBehaviour
 {
     private WebCamTexture camTexture;
     public RawImage display;  // Assign this to a UI RawImage to see the camera feed

@@ -6,8 +6,10 @@ using TMPro;
 public class ComparePassword : MonoBehaviour
 {
     private StringManager stringManager;
+    private TMP_Text terminal;
     private string password;
     private string guess;
+    private int similar;
 
     void Start() {
     }
@@ -20,14 +22,17 @@ public class ComparePassword : MonoBehaviour
         // Get guessed password
         guess = GetComponentInChildren<TMP_Text>().text;
 
+        // Get terminal information
+        terminal = GameObject.FindWithTag("Terminal").GetComponent<TMP_Text>(); 
+
         // Correct password
         if (password == guess) {
-            Debug.Log("yay!");
+            CorrectSequence();
         }
 
         // Incorrect password
         else {
-            int similar = 0;
+            similar = 0;
             string shorter = password;
             if (guess.Length < password.Length) {
                 shorter = guess;
@@ -39,7 +44,15 @@ public class ComparePassword : MonoBehaviour
                 } 
             }
 
-            Debug.Log("pain " + similar);
+            IncorrectSequence();
         }
+    }
+
+    void CorrectSequence() {
+        terminal.text += "\n> " + guess + "\n> Exact match! " + "\n> Infiltrating system...";
+    }
+
+    void IncorrectSequence() {
+        terminal.text += "\n> " + guess + "\n> Incorrect! " + similar + " chars correct.";
     }
 }

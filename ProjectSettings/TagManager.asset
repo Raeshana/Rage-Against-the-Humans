@@ -13,6 +13,7 @@ TagManager:
   - 7-char
   - 8-char
   - StringManager
+  - Terminal
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: 6-CharSet
   m_EditorClassIdentifier: 
   strings:
-  - ANSYS
   - SCOTTY
   - TARTAN
   - TEPPER

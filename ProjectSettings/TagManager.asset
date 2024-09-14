@@ -16,6 +16,7 @@ TagManager:
   - Terminal
   - AttemptManager
   - SceneController
+  - LastScene
   layers:
   - Default
   - TransparentFX

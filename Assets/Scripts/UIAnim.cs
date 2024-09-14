@@ -37,6 +37,11 @@ public class UIAnim : MonoBehaviour
             yield return new WaitForSeconds(changeSpeed);
         }
 
-        sceneController.GoToCameraScreen();
+        if(gameObject.tag == "LastScene") {
+            sceneController.GoToMainMenu();
+        }
+        else {
+            sceneController.GoToCameraScreen();
+        }
     }
 }

@@ -915,6 +915,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2267075317770583125, guid: a06f64ee7c6bd4d479a450adcc11120b, type: 3}
+      propertyPath: musicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f72cd61c81989ad46b1b2b62a0d3491b, type: 3}
     - target: {fileID: 3171885840954817955, guid: a06f64ee7c6bd4d479a450adcc11120b, type: 3}
       propertyPath: m_Name
       value: Audio Manager

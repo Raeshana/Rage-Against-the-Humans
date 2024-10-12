@@ -177,11 +177,12 @@ MonoBehaviour:
   musicSource: {fileID: 7691703459096596934}
   SFXSource: {fileID: 1531310356061397350}
   GameLoop: {fileID: 8300000, guid: b9e81b574ba104439a112dfad8c8f19c, type: 3}
-  Hacking: {fileID: 8300000, guid: 28982a5484e3e4d2cb1b11de4571f5bb, type: 3}
+  Hacking: {fileID: 8300000, guid: f72cd61c81989ad46b1b2b62a0d3491b, type: 3}
   Loading: {fileID: 8300000, guid: 9f7f1b75f9a994d4ab1edceeb3b379fa, type: 3}
   MachineShutdown: {fileID: 8300000, guid: cd592ac5af9994c088a5c2d2ca466cf2, type: 3}
   TargetFound: {fileID: 8300000, guid: 1c68f2c4ebfae4e0bbe1796390075de8, type: 3}
   Warning: {fileID: 8300000, guid: b843c829e73dd4a558dedb6368c3a6f2, type: 3}
+  musicClip: {fileID: 8300000, guid: b9e81b574ba104439a112dfad8c8f19c, type: 3}
 --- !u!1 &8214403643019229166
 GameObject:
   m_ObjectHideFlags: 0

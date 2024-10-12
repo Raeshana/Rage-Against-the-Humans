@@ -16,9 +16,12 @@ public class AudioManager : MonoBehaviour
     public AudioClip TargetFound;
     public AudioClip Warning;
 
-    private void Start()
+    [Header("--------Initialize Music Audio---------")]
+    public AudioClip musicClip;
+
+    public void Start() 
     {
-        musicSource.clip = GameLoop;
+        musicSource.clip = musicClip;
         musicSource.Play();
     }
 

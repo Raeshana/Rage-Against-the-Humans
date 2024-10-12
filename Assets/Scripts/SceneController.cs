@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     [ContextMenu("Go to hacking mini game")]
     public void GoToHackingMinigame()
     {
@@ -47,16 +54,9 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("WarScreen", LoadSceneMode.Single);
     }
 
-    AudioManager audioManager;
-
-    private void Awake()
-{
-    audioManager = GameObject.FindWithTag("Audio").GetComponent<AudioManager>();
-}
     [ContextMenu("Go to opening cutscene")]
     public void GoToOpeningCutscene()
     {
-        audioManager.PlaySFX(audioManager.Warning);
         SceneManager.LoadScene("OpeningCutscene", LoadSceneMode.Single);
     }
 

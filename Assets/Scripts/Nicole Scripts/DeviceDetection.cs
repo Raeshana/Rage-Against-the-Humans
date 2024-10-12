@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Collections;
 using SimpleJSON;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DeviceDetection : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class DeviceDetection : MonoBehaviour
     public RawImage display;  // Assign this to a UI RawImage to see the camera feed
     public float requestInterval = 1f;  // Delay between each request (in seconds)
     public GameObject Popup;  // Reference to the entire Popup GameObject
-    public Button detectionButton;           // Reference to the Button inside the Popup
+    public Button detectionButton;  // Reference to the Button inside the Popup
+    public TMP_Text deviceName;
 
 
     void Start()
@@ -89,6 +91,7 @@ public class DeviceDetection : MonoBehaviour
             {
                 Popup.SetActive(true);  // Show the popup
                 detectionButton.gameObject.SetActive(true);
+                deviceName.text = jsonResponse;
                 break;
             }
         }

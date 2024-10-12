@@ -91,7 +91,7 @@ public class DeviceDetection : MonoBehaviour
             {
                 Popup.SetActive(true);  // Show the popup
                 detectionButton.gameObject.SetActive(true);
-                deviceName.text = jsonResponse;
+                deviceName.text = detectedClass;
                 break;
             }
         }

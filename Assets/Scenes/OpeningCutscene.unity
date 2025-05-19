@@ -984,6 +984,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 699810474}
+    - target: {fileID: 7148942614037504403, guid: ced5520dbebb89240ba96ad0fa41b6c8, type: 3}
+      propertyPath: speed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7867562141879854561, guid: ced5520dbebb89240ba96ad0fa41b6c8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

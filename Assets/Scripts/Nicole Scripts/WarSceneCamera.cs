@@ -53,7 +53,7 @@ public class WarSceneCamera : MonoBehaviour
     IEnumerator SendImageToFlask(byte[] imageBytes)
     {
         // Make a POST request to send the image
-        UnityWebRequest request = UnityWebRequest.PostWwwForm("https://5f33-34-70-175-72.ngrok-free.app/detect", UnityWebRequest.kHttpVerbPOST);
+        UnityWebRequest request = UnityWebRequest.PostWwwForm("https://7bd2-35-237-163-60.ngrok-free.app/detect", UnityWebRequest.kHttpVerbPOST);
         request.uploadHandler = new UploadHandlerRaw(imageBytes);
         request.SetRequestHeader("Content-Type", "application/octet-stream");
 
